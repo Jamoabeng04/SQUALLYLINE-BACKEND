@@ -82,10 +82,9 @@ CSRF_TRUSTED_ORIGINS = [
     'http://172.20.10.4:8001',
     'http://172.20.10.4:3000',
     'http://172.20.10.4:3001',
-    'https://squallyline-api.up.railway.app/',
+    'https://squallyline-api.up.railway.app',
     'https://squallyline-frontend-production.up.railway.app',
 ]
-
 # ALLOWED_HOSTS entries are hostnames only — never host:port.
 ALLOWED_HOSTS = [
     'localhost',
