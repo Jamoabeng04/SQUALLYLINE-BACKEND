@@ -41,6 +41,8 @@ CORS_ALLOWED_ORIGINS = [
     'http://172.20.10.4:8001',
     'http://172.20.10.4:3000',
     'http://172.20.10.4:3001',
+    'https://squallyline-api.up.railway.app/',
+    'https://squallyline-frontend-production.up.railway.app',
 ]
 
 # Any device on the local Wi-Fi can reach the dev API (phones, tablets).
@@ -80,6 +82,8 @@ CSRF_TRUSTED_ORIGINS = [
     'http://172.20.10.4:8001',
     'http://172.20.10.4:3000',
     'http://172.20.10.4:3001',
+    'https://squallyline-api.up.railway.app/',
+    'https://squallyline-frontend-production.up.railway.app',
 ]
 
 # ALLOWED_HOSTS entries are hostnames only — never host:port.
@@ -88,6 +92,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '::1',
     '172.20.10.4',
+    'squallyline-api.up.railway.app',
+    'squallyline-frontend-production.up.railway.app',
 ]
 
 # Dev on a shifting LAN IP: accept any host so phones/tablets can hit the API.
@@ -155,8 +161,14 @@ WSGI_APPLICATION = 'squallyline.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'OJOWCbCIHSaOqBdGdCHBdLfbfoFBhzPr',
+        'HOST': "tokaido.proxy.rlwy.net",
+        'PORT': '48730',
     }
 }
 
