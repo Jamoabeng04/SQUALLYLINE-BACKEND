@@ -221,8 +221,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Paystack — read from the environment; empty in dev until real keys are added.
-PAYSTACK_SECRET_KEY = os.environ.get('PAYSTACK_SECRET_KEY', '')
-PAYSTACK_PUBLIC_KEY = os.environ.get('PAYSTACK_PUBLIC_KEY', '')
+PAYSTACK_SECRET_KEY = 'sk_test_66c33934fabe2c947d452d2711a02b94473770e2'
+PAYSTACK_PUBLIC_KEY = 'pk_test_7bde29ddb24ae734aaab8fe0912b39817a6684e7'
 PAYSTACK_CALLBACK_URL = os.environ.get(
     'PAYSTACK_CALLBACK_URL', 'http://172.20.10.4:3000/payment/callback'
 )
